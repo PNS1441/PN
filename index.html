@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AES</title>
+</head>
+<body>
+    <h2>Mã hóa và Giải mã AES</h2>
+
+    <form method="POST" action="/encrypt">
+        <h3>Mã hóa</h3>
+        <label>Văn bản:</label><br>
+        <textarea name="text" rows="4" cols="50"></textarea><br>
+        <label>Khóa:</label><br>
+        <input type="text" name="key"><br>
+        <input type="submit" value="Mã hóa">
+    </form>
+
+    <form method="POST" action="/decrypt">
+        <h3>Giải mã</h3>
+        <label>Mã hóa:</label><br>
+        <textarea name="text" rows="4" cols="50"></textarea><br>
+        <label>Khóa:</label><br>
+        <input type="text" name="key"><br>
+        <input type="submit" value="Giải mã">
+    </form>
+
+    {% if result %}
+        <h3>Kết quả:</h3>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
